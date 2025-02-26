@@ -5,14 +5,14 @@
  */
 function calculateRentalCost(days) {
   const dailyRate = 40;
+  const bigDisc = 50;
+  const smallDisc = 20;
   let totalCost = days * dailyRate;
 
   if (days >= 7) {
-    totalCost -= 50;
-  }
-
-  if (days >= 3) {
-    totalCost -= 20;
+    totalCost -= bigDisc;
+  } else if (days >= 3) {
+    totalCost -= smallDisc;
   }
 
   return totalCost;
